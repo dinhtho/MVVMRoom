@@ -1,4 +1,4 @@
-package com.example.androidjetpack
+package com.example.androidjetpack.view
 
 import android.app.Activity
 import android.content.Intent
@@ -11,7 +11,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.androidjetpack.R
 import com.example.androidjetpack.model.Note
+import com.example.androidjetpack.viewModel.NoteViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +36,10 @@ class MainActivity : AppCompatActivity() {
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
         noteViewModel.getAllNotes().observe(this,
             Observer<List<Note>> { t -> adapter.setNotes(t!!) })
+
+        lifecycle.addObserver(DemoLifecycle())
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return true

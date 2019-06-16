@@ -1,4 +1,4 @@
-package com.example.androidjetpack.model
+package com.example.androidjetpack.db
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

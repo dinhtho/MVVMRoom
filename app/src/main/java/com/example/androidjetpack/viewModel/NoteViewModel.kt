@@ -3,8 +3,8 @@ package com.example.androidjetpack.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.androidjetpack.model.Note
-import com.example.androidjetpack.model.NoteRepository
+import com.example.androidjetpack.db.Note
+import com.example.androidjetpack.db.NoteRepository
 
 /**
  * Created by tho nguyen on 2019-05-28.

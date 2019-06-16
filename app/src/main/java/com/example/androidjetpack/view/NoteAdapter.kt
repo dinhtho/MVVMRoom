@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidjetpack.R
-import com.example.androidjetpack.model.Note
+import com.example.androidjetpack.db.Note
 
 /**
  * Created by tho nguyen on 2019-05-28.

@@ -1,4 +1,4 @@
-package com.example.androidjetpack.model
+package com.example.androidjetpack.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -13,11 +13,12 @@ import androidx.room.Query
 interface NoteDao {
 
     @Insert
-    fun insert(note: Note)
+    suspend fun insert(note: Note)
 
     @Query("DELETE FROM notes_table")
-    fun deleteAllNotes()
+    suspend fun deleteAllNotes()
 
+    // coroutines do not support live data
     @Query("SELECT * FROM notes_table ")
     fun getAllNotes(): LiveData<List<Note>>
 

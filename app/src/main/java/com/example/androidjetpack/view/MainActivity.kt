@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidjetpack.R
-import com.example.androidjetpack.model.Note
+import com.example.androidjetpack.db.Note
 import com.example.androidjetpack.viewModel.NoteViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
